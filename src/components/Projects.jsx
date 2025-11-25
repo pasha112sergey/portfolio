@@ -45,7 +45,7 @@ const Projects = () => {
                     width={150}
                     height={150}
                     alt={project.title}
-                    className="mb-6 rounded-lg w-64 h-64"
+                    className="mb-6 rounded-lg w-64 h-64 object-fill"
                   />
                 )}
               </ThreeDCard>
@@ -62,7 +62,13 @@ const Projects = () => {
               >
                 <h6 className="mb-2 font-semibold">{project.title}</h6>
               </a>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
+              {/* <p className="my-2 maxw-xl py-6" >{project.description}</p> */}
+              <p
+                className="mb-4 text-neutral-400"
+                style={{ whiteSpace: "pre-line" }}
+              >
+                {project.description}
+              </p>
               <div className="flex flex-wrap">
                 {project.technologies.map((tech, index) => (
                   <span

@@ -30,7 +30,7 @@ const Experience = () => {
             >
               <h6 className="mb-2 font-semibold">
                 {experience.role} -{" "}
-                <span className="text-sm text-purple-100">
+                <span className="text-m text-purple-100">
                   <a
                     href={experience.link}
                     className="hover:text-blue-500 transition duration-300"
@@ -40,7 +40,10 @@ const Experience = () => {
                 </span>
               </h6>
               <div className="flex flex-wrap">
-                <p className="mb-4 text-neutral-400">
+                <p
+                  className="mb-4 text-neutral-400"
+                  style={{ whiteSpace: "pre-line" }}
+                >
                   {experience.description}
                 </p>
                 {experience.technologies.map((tech, index) => (
